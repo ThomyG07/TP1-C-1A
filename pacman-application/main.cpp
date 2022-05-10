@@ -1,23 +1,22 @@
-#include "mainwindow.h"
-
-#include <QApplication>
-#include <QLocale>
-#include <QTranslator>
-
-int main(int argc, char *argv[])
+bool detecter_collision(int ennemis_x[], int ennemis_y[], int nb_ennemis, int x, int y)
 {
-    QApplication a(argc, argv);
-
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "pacman-application_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
+    int iteration = 0;
+    for(iteration=0,iteration< nb_ennemis,++iteration)
+    {
+        if (ennemis_x[iteration] == x && ennemis_y[iteration] == y) { return 1; }
     }
-    MainWindow w;
-    w.show();
-    return a.exec();
+    return 0;
+};
+
+
+bool deplacer_personnage(int x, int y, std::string cmd);
+int main(int argc, char* argv[])
+{ 
+    int x=5, y=4;
+    deplacer_personnage(x, y, "UP")
+}
+
+bool deplacer_personnage(int x, int y, std::string cmd)
+{
+
 }
