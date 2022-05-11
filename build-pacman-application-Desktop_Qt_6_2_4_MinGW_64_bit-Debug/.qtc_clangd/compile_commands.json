@@ -3,13 +3,17 @@
     "arguments": [
         "clang",
         "-I",
-        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedMingwHeaders",
+        "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedMingwHeaders",
         "-I",
-        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
+        "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
         "-I",
-        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
+        "C:\\Qt\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
+<<<<<<< HEAD
         "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
+=======
+        "C:\\Users\\thoma\\AppData\\Local\\Temp\\QtCreator-QGezAL\\clang-uiheader-UbSCdb",
+>>>>>>> 0465049177a3ede9392ea32bbb521395e1ab067e
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -30,31 +34,36 @@
         "-DQT_QML_DEBUG",
         "-DQT_GUI_LIB",
         "-DQT_CORE_LIB",
-        "-DQT_NEEDS_QMAIN",
         "-I",
-        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application",
+        "D:\\c ++\\TP1\\TP1-C-1A\\pacman-application",
         "-I",
-        "D:\\Qt2\\6.2.4\\mingw_64\\include",
+        "C:\\Qt\\6.2.4\\mingw_64\\include",
         "-I",
+<<<<<<< HEAD
         "D:\\Qt2\\6.2.4\\mingw_64\\include\\QtGui",
+=======
+        "C:\\Qt\\6.2.4\\mingw_64\\include\\QtWidgets",
         "-I",
-        "D:\\Qt2\\6.2.4\\mingw_64\\include\\QtCore",
+        "C:\\Qt\\6.2.4\\mingw_64\\include\\QtGui",
+>>>>>>> 0465049177a3ede9392ea32bbb521395e1ab067e
         "-I",
-        "D:\\TP-Informatique\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug\\debug",
+        "C:\\Qt\\6.2.4\\mingw_64\\include\\QtCore",
         "-I",
-        "D:\\TP-Informatique\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+        "D:\\c ++\\TP1\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug\\debug",
         "-I",
-        "D:\\Qt2\\6.2.4\\mingw_64\\mkspecs\\win32-g++",
+        "D:\\c ++\\TP1\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+        "-I",
+        "C:\\Qt\\6.2.4\\mingw_64\\mkspecs\\win32-g++",
         "-isystem",
-        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++",
+        "C:\\Qt\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++",
         "-isystem",
-        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\x86_64-w64-mingw32",
+        "C:\\Qt\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\x86_64-w64-mingw32",
         "-isystem",
-        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\backward",
+        "C:\\Qt\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\backward",
         "-isystem",
-        "D:\\Qt2\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.0\\include",
+        "C:\\Qt\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.0\\include",
         "-isystem",
-        "D:\\Qt2\\Tools\\mingw1120_64\\x86_64-w64-mingw32\\include",
+        "C:\\Qt\\Tools\\mingw1120_64\\x86_64-w64-mingw32\\include",
         "-fmessage-length=0",
         "-fdiagnostics-show-note-include-stack",
         "-fretain-comments-from-system-headers",
@@ -66,8 +75,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\main.cpp"
+        "D:\\c ++\\TP1\\TP1-C-1A\\pacman-application\\main.cpp"
     ],
+<<<<<<< HEAD
     "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
     "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/main.cpp"
 },
@@ -358,5 +368,9 @@
     ],
     "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
     "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/personnage.h"
+=======
+    "directory": "D:/c ++/TP1/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
+    "file": "D:/c ++/TP1/TP1-C-1A/pacman-application/main.cpp"
+>>>>>>> 0465049177a3ede9392ea32bbb521395e1ab067e
 }
 ]

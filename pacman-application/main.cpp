@@ -1,22 +1,119 @@
+#include<iostream>
+#include<string>
+#include <exception>
 bool detecter_collision(int ennemis_x[], int ennemis_y[], int nb_ennemis, int x, int y)
 {
     int iteration = 0;
-    for(iteration=0,iteration< nb_ennemis,++iteration)
+    for(iteration=0;iteration< nb_ennemis;++iteration)
     {
         if (ennemis_x[iteration] == x && ennemis_y[iteration] == y) { return 1; }
     }
     return 0;
 };
 
+//Class Exception
+class ExceptionCommand
+{
 
-bool deplacer_personnage(int x, int y, std::string cmd);
+};
+class ExceptionBound
+{
+};
+//
+
+bool deplacer_personnage(int& x, int& y, std::string cmd);
 int main(int argc, char* argv[])
-{ 
-    int x=5, y=4;
-    deplacer_personnage(x, y, "UP")
+{
+
+    int x=33, y=4;
+    std::string cmd;
+    try{
+    do
+    {
+        std::getline(std::cin,cmd);
+       std::cout<<deplacer_personnage(x, y, cmd); // affiche 1 qd personnage peut se deplacer
+    }while(cmd != "");
+    }
+    catch(ExceptionCommand& ec)
+    {
+
+        std::cout<<"La commande n'est pas reconnue";
+    }
+    catch(ExceptionBound& eb)
+    {
+
+       std::cout<<"La joueur est hors limites";
+    }
+
 }
 
-bool deplacer_personnage(int x, int y, std::string cmd)
+bool deplacer_personnage(int& x, int& y, std::string cmd)
 {
+    const int xmin = 0, ymin = 0, xmax = 32, ymax = 15;
+    if(x<xmin || x >xmax || y<ymin || y > ymax)
+    {
+      throw ExceptionBound();
+    }
+    if(cmd=="UP")
+    {
+        if(y>ymin)
+        {
+            y--;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd=="DOWN")
+    {
+        if(y<ymax)
+        {
+            y++;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd == "LEFT")
+    {
+        if(x>xmin)
+        {
+            x--;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd =="RIGHT")
+    {
+        if(x<xmax)
+        {
+            x++;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd =="IDLE")
+    {
+        return false;
+    }
+    else
+    {
+       throw ExceptionCommand();
+
+    }
 
 }
