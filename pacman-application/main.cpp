@@ -1,9 +1,17 @@
 #include<iostream>
 #include<string>
 #include <exception>
+#include "exceptionsizetab.h"
+
 bool detecter_collision(int ennemis_x[], int ennemis_y[], int nb_ennemis, int x, int y)
 {
     int iteration = 0;
+
+    if(nb_ennemis <= 0)
+    {
+        throw ExceptionSizeTab();
+    }
+
     for(iteration=0;iteration< nb_ennemis;++iteration)
     {
         if (ennemis_x[iteration] == x && ennemis_y[iteration] == y) { return 1; }
@@ -26,7 +34,7 @@ int main(int argc, char* argv[])
 {
 
     int x=3, y=4;
-    int x=5, y=4;
+
     int ennemis_x[4]={1,2,3,4}, ennemis_y[4]={1,2,3,4};
     if (detecter_collision(ennemis_x,ennemis_y,4,x,y))
     {
@@ -43,12 +51,17 @@ int main(int argc, char* argv[])
     catch(ExceptionCommand& ec)
     {
 
-        std::cout<<"La commande n'est pas reconnue";
+        std::cout<<"La commande n'est pas reconnue <<" std::endl;
     }
     catch(ExceptionBound& eb)
     {
 
-       std::cout<<"La joueur est hors limites";
+       std::cout<<"La joueur est hors limite" std::endl;
+    }
+    try{(detecter_collision(ennemis_x,ennemis_y,4,x,y));))}
+    catch(ExceptionSizeTab& est)
+    {
+        std::cout << "Nombre d'éléments incorrects" << std::endl;
     }
     return 0;
 
