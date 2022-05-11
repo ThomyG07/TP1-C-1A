@@ -9,26 +9,12 @@ CONFIG += console
 
 SOURCES += \
     main.cpp \
-<<<<<<< HEAD
-    notifierobserver.cpp \
+    notifiercollision.cpp \
     personnage.cpp
 
 HEADERS += \
-    notifierobserver.h \
+    notifiercollision.h \
     personnage.h
-
-=======
-   # mainwindow.cpp
-
-HEADERS += \
-   # mainwindow.h
-
-FORMS += \
-   # mainwindow.ui
-
-TRANSLATIONS += \
-    pacman-application_fr_FR.ts
->>>>>>> 0465049177a3ede9392ea32bbb521395e1ab067e
 CONFIG += lrelease
 CONFIG += embed_translations
 
