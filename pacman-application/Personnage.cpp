@@ -1,6 +1,6 @@
 #include "personnage.h"
 #include <string>
-#include "NotifierObserver.h"
+#include "NotifierCollision.h"
 Personnage::Personnage()
     : NotifierObserver()
 {
