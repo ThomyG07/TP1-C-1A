@@ -1,7 +1,6 @@
 #include "personnage.h"
 #include <string>
 #include "NotifierObserver.h"
-
 Personnage::Personnage()
     : NotifierObserver()
 {
@@ -11,7 +10,7 @@ Personnage::Personnage()
 void Personnage::setDeplacement(std::string deplacement)
 {
     Personnage::deplacement = deplacement;
-    Personnage::notify();
+    notify(pos_x, pos_y);
 }
 
 std::string Personnage::getDeplacement()

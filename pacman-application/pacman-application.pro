@@ -1,6 +1,5 @@
-QT       += core gui
+QT       += core
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++17
 
@@ -10,20 +9,13 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
     notifierobserver.cpp \
     personnage.cpp
 
 HEADERS += \
-    mainwindow.h \
     notifierobserver.h \
     personnage.h
 
-FORMS += \
-    mainwindow.ui
-
-TRANSLATIONS += \
-    pacman-application_fr_FR.ts
 CONFIG += lrelease
 CONFIG += embed_translations
 
