@@ -35,6 +35,7 @@ Thumbs.db
 /.qmake.cache
 /.vs
 /.qmake.stash
+/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug
 
 # qtcreator generated files
 *.pro.user*

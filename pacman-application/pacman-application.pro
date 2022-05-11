@@ -10,10 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    notifierobserver.cpp \
+    personnage.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    notifierobserver.h \
+    personnage.h
 
 FORMS += \
     mainwindow.ui

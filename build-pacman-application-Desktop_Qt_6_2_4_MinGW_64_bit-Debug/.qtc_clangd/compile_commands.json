@@ -9,7 +9,7 @@
         "-I",
         "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-eisQFa\\clang-uiheader-AvNPMk",
+        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -84,7 +84,7 @@
         "-I",
         "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-eisQFa\\clang-uiheader-AvNPMk",
+        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -144,10 +144,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\mainwindow.cpp"
+        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\notifierobserver.cpp"
     ],
     "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
-    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/mainwindow.cpp"
+    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/notifierobserver.cpp"
 },
 {
     "arguments": [
@@ -159,7 +159,82 @@
         "-I",
         "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-eisQFa\\clang-uiheader-AvNPMk",
+        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
+        "-nostdinc",
+        "-nostdinc++",
+        "-g",
+        "-std=gnu++1z",
+        "-Wall",
+        "-Wextra",
+        "-Wextra",
+        "-fexceptions",
+        "-mthreads",
+        "-fsyntax-only",
+        "-m64",
+        "--target=x86_64-w64-mingw32",
+        "-DQ_CREATOR_RUN",
+        "-DUNICODE",
+        "-D_UNICODE",
+        "-DWIN32",
+        "-DMINGW_HAS_SECURE_API",
+        "-DQT_QML_DEBUG",
+        "-DQT_WIDGETS_LIB",
+        "-DQT_GUI_LIB",
+        "-DQT_CORE_LIB",
+        "-DQT_NEEDS_QMAIN",
+        "-I",
+        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application",
+        "-I",
+        "D:\\Qt2\\6.2.4\\mingw_64\\include",
+        "-I",
+        "D:\\Qt2\\6.2.4\\mingw_64\\include\\QtWidgets",
+        "-I",
+        "D:\\Qt2\\6.2.4\\mingw_64\\include\\QtGui",
+        "-I",
+        "D:\\Qt2\\6.2.4\\mingw_64\\include\\QtCore",
+        "-I",
+        "D:\\TP-Informatique\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug\\debug",
+        "-I",
+        "D:\\TP-Informatique\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug",
+        "-I",
+        "D:\\Qt2\\6.2.4\\mingw_64\\mkspecs\\win32-g++",
+        "-isystem",
+        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++",
+        "-isystem",
+        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\x86_64-w64-mingw32",
+        "-isystem",
+        "D:\\Qt2\\Tools\\mingw1120_64\\lib\\gcc\\x86_64-w64-mingw32\\11.2.0\\include\\c++\\backward",
+        "-isystem",
+        "D:\\Qt2\\Tools\\QtCreator\\bin\\clang\\lib\\clang\\14.0.0\\include",
+        "-isystem",
+        "D:\\Qt2\\Tools\\mingw1120_64\\x86_64-w64-mingw32\\include",
+        "-fmessage-length=0",
+        "-fdiagnostics-show-note-include-stack",
+        "-fretain-comments-from-system-headers",
+        "-fmacro-backtrace-limit=0",
+        "-ferror-limit=1000",
+        "-x",
+        "c++",
+        "-Wno-unknown-pragmas",
+        "-Wno-unknown-warning-option",
+        "-Wno-documentation-unknown-command",
+        "-fno-delayed-template-parsing",
+        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\personnage.cpp"
+    ],
+    "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
+    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/personnage.cpp"
+},
+{
+    "arguments": [
+        "clang",
+        "-I",
+        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedMingwHeaders",
+        "-I",
+        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders",
+        "-I",
+        "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
+        "-I",
+        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -219,10 +294,10 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\mainwindow.h"
+        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\notifierobserver.h"
     ],
     "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
-    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/mainwindow.h"
+    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/notifierobserver.h"
 },
 {
     "arguments": [
@@ -234,7 +309,7 @@
         "-I",
         "D:\\Qt2\\Tools\\QtCreator\\share\\qtcreator\\cplusplus\\wrappedQtHeaders\\QtCore",
         "-I",
-        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-eisQFa\\clang-uiheader-AvNPMk",
+        "C:\\Users\\quent\\AppData\\Local\\Temp\\QtCreator-zmHqEj\\clang-uiheader-GLcUrY",
         "-nostdinc",
         "-nostdinc++",
         "-g",
@@ -294,9 +369,9 @@
         "-Wno-unknown-warning-option",
         "-Wno-documentation-unknown-command",
         "-fno-delayed-template-parsing",
-        "D:\\TP-Informatique\\TP1-C-1A\\build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug\\ui_mainwindow.h"
+        "D:\\TP-Informatique\\TP1-C-1A\\pacman-application\\personnage.h"
     ],
     "directory": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/.qtc_clangd",
-    "file": "D:/TP-Informatique/TP1-C-1A/build-pacman-application-Desktop_Qt_6_2_4_MinGW_64_bit-Debug/ui_mainwindow.h"
+    "file": "D:/TP-Informatique/TP1-C-1A/pacman-application/personnage.h"
 }
 ]

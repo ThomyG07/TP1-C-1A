@@ -1,7 +1,11 @@
+#ifndef NOTIFIERCOLLISION_H
+#define NOTIFIERCOLLISION_H
+
+
 class NotifierCollision
 {
 public:
-	void addObserver(ObserverCollision obs);
-	void removeObserver(ObserverCollision obs);
-	void notify(int x, int y);
+    NotifierCollision();
 };
+
+#endif // NOTIFIERCOLLISION_H
