@@ -25,7 +25,13 @@ bool deplacer_personnage(int& x, int& y, std::string cmd);
 int main(int argc, char* argv[])
 {
 
-    int x=33, y=4;
+    int x=3, y=4;
+    int x=5, y=4;
+    int ennemis_x[4]={1,2,3,4}, ennemis_y[4]={1,2,3,4};
+    if (detecter_collision(ennemis_x,ennemis_y,4,x,y))
+    {
+     std::cout << "Collision" << std::endl;
+    };
     std::string cmd;
     try{
     do
@@ -44,6 +50,7 @@ int main(int argc, char* argv[])
 
        std::cout<<"La joueur est hors limites";
     }
+    return 0;
 
 }
 
