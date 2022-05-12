@@ -15,6 +15,7 @@ SOURCES += \
     drawableelem.cpp \
     interactive.cpp \
     main.cpp \
+    mainwindow.cpp \
     movable.cpp \
     regularmove.cpp
 
@@ -25,6 +26,7 @@ HEADERS += \
     drawable.h \
     drawableelem.h \
     interactive.h \
+    mainwindow.h \
     movable.h \
     regularmove.h
 
@@ -32,3 +34,6 @@ HEADERS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+FORMS += \
+    mainwindow.ui
