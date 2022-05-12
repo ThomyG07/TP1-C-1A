@@ -1,9 +1,9 @@
 #ifndef PERSONNAGE_H
 #define PERSONNAGE_H
 #include <string>
-#include "NotifierObserver.h"
+#include "NotifierCollision.h"
 
-class Personnage: public NotifierObserver
+class Personnage: public NotifierCollision
 {
 private:
     int pos_x;

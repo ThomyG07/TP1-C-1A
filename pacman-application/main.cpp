@@ -2,6 +2,8 @@
 #include<string>
 #include <exception>
 #include "exceptionsizetab.h"
+#include "Clyde.h"
+#include "Personnage.h"
 
 bool detecter_collision(int ennemis_x[], int ennemis_y[], int nb_ennemis, int x, int y)
 {
@@ -32,6 +34,8 @@ class ExceptionBound
 bool deplacer_personnage(int& x, int& y, std::string cmd);
 int main(int argc, char* argv[])
 {
+    Personnage pacman;
+    Clyde totot;
 
     int x=3, y=4;
 
@@ -51,14 +55,16 @@ int main(int argc, char* argv[])
     catch(ExceptionCommand& ec)
     {
 
-        std::cout<<"La commande n'est pas reconnue <<" std::endl;
+        std::cout<<"La commande n'est pas reconnue "<< std::endl;
     }
     catch(ExceptionBound& eb)
     {
 
-       std::cout<<"La joueur est hors limite" std::endl;
+       std::cout<<"La joueur est hors limite"<< std::endl;
     }
-    try{(detecter_collision(ennemis_x,ennemis_y,4,x,y));))}
+    try{
+        detecter_collision(ennemis_x,ennemis_y,4,x,y);
+    }
     catch(ExceptionSizeTab& est)
     {
         std::cout << "Nombre d'éléments incorrects" << std::endl;

@@ -1,5 +1,6 @@
-#include "notifiercollision.h"
+#include "NotifierCollision.h"
 #include <vector>
+#include"observercollision.h"
 
 NotifierCollision::NotifierCollision()
     :observerList({})

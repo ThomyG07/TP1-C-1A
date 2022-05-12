@@ -1,10 +1,9 @@
 #ifndef NOTIFIERCOLLISION_H
 #define NOTIFIERCOLLISION_H
-
+class ObserverCollision;
 
 #include <vector>
 
-class ObserverCollision;
 class NotifierCollision
 {
 
