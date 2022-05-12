@@ -4,7 +4,7 @@
 
 Clyde::Clyde()
 {
-
+   set_backround_image(clyde_ba_1.png);
 }
 void Clyde::new_pos()
 {
