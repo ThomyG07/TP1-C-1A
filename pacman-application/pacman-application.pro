@@ -1,29 +1,32 @@
-QT       += core
+QT       += core gui statemachine
 
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-CONFIG += c++17
-CONFIG += console
+CONFIG += c++11
+
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    exceptionsizetab.cpp \
-    clyde.cpp \
-    ennemi.cpp \
-    notifiercollision.cpp \
-    personnage.cpp \
-    main.cpp
-    
-HEADERS += \
-    exceptionsizetab.h \
-    clyde.h \
-    ennemi.h \
-    notifiercollision.h \
-    personnage.h
+    animatedwidget.cpp \
+    background.cpp \
+    drawable.cpp \
+    drawableelem.cpp \
+    interactive.cpp \
+    main.cpp \
+    movable.cpp \
+    regularmove.cpp
 
-CONFIG += lrelease
-CONFIG += embed_translations
+HEADERS += \
+    animatedwidget.h \
+    background.h \
+    consts.h \
+    drawable.h \
+    drawableelem.h \
+    interactive.h \
+    movable.h \
+    regularmove.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
