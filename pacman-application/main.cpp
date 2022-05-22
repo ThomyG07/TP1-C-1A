@@ -29,7 +29,6 @@ class ExceptionBound
 };
 //
 
-bool deplacer_personnage(int& x, int& y, std::string cmd);
 int main(int argc, char* argv[])
 {
 
@@ -137,3 +136,5 @@ bool deplacer_personnage(int& x, int& y, std::string cmd)
     }
 
 }
+
+

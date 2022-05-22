@@ -31,9 +31,9 @@ void NotifierCollision::notify(int x, int y)
 {
     for(int i = 0; i < observerList.size(); i++)
     {
-        if(observerList[i].test_collision(x, y))
+        if(observerList[i]->test_collision(x, y))
         {
-            observerList[i].collision(this);
+            observerList[i]->collision(this);
         }
     }
 }
