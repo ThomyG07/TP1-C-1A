@@ -6,7 +6,7 @@
 class Clyde: public Ennemi
 {
 public:
-    Clyde();
+    Clyde(int x, int y, Background* background);
     void new_pos();
 };
 

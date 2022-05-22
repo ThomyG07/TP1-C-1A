@@ -2,13 +2,14 @@
 #include<random>
 #include<ctime>
 
-Clyde::Clyde()
+Clyde::Clyde(int x, int y, Background* background)
+    : Ennemi(x, y, background)
 {
-   set_backround_image(clyde_ba_1.png);
+   set_background_image("clyde_ba_1.png");
 }
 void Clyde::new_pos()
 {
-    int val = rand() % 3 + 1;
+    int val = rand() % 4;
     switch(val)
     {
         case 1: deplacer(1,0);

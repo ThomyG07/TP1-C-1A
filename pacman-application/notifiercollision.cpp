@@ -1,18 +1,19 @@
 #include "notifiercollision.h"
+#include "observercollision.h"
 #include <vector>
 
 NotifierCollision::NotifierCollision()
-    :observerList({})
+    :observerList(std::vector<ObserverCollision*>())
 {
 
 }
 
-void NotifierCollision::addObserver(ObserverCollision obs)
+void NotifierCollision::addObserver(ObserverCollision* obs)
 {
     observerList.push_back(obs);
 }
 
-void NotifierCollision::removeObserver(ObserverCollision obs)
+void NotifierCollision::removeObserver(ObserverCollision* obs)
 {
     int position = -1;
     for(int i = 0; i < observerList.size(); i++)
@@ -22,7 +23,7 @@ void NotifierCollision::removeObserver(ObserverCollision obs)
             position = i;
         }
     }
-    observerList.erase(position);
+    observerList.erase(observerList.begin() + position);
 
 }
 

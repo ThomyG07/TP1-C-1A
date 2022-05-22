@@ -5,10 +5,10 @@
 #include "observercollision.h"
 #include "NotifierCollision.h"
 
-Personnage::Personnage()
-    : NotifierCollision(), ObserverCollision(), Interactive(pos_x, pos_y, )
+Personnage::Personnage(int pos_x, int pos_y, Background* background)
+    : NotifierCollision(), ObserverCollision(), Interactive(pos_x, pos_y, background)
 {
-    set_background_image("D:\\TP-Informatique\\TP1-C-1A\\images\\pacman_dr_1");
+    set_background_image("pacman_dr_1.png");
 }
 
 void Personnage::update_pos()
@@ -17,7 +17,7 @@ void Personnage::update_pos()
     notify(pos_x, pos_y);
 }
 
-void Personnage::collision(NotifierCollision notifieur)
+void Personnage::collision(NotifierCollision* notifieur)
 {
     std::cout << "Collision" << std::endl;
 }

@@ -20,7 +20,6 @@ void DrawableElem::resized(double fx, double fy)
     this->setGeometry(geom);
 }
 
-
 void DrawableElem::correct_margins(QRect& geom)
 {
     // ajout de marges pour respecter l'aspect ratio

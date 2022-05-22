@@ -9,13 +9,12 @@ class Personnage: public NotifierCollision, public ObserverCollision, public Int
 {
 private:
     std::string deplacement;
-    bool deplacer_personnage(int& x, int& y, std::string cmd);
 public:
-    Personnage();
+    Personnage(int x, int y, Background* background);
     void setDeplacement(std::string deplacement);
     std::string getDeplacement();
     void key_pressed(char key);
-    void collision(NotifierCollision notifier);
+    void collision(NotifierCollision* notifier);
     bool test_collision(int x, int y);
     void update_pos();
     void arrow_pressed(std::string cmd);

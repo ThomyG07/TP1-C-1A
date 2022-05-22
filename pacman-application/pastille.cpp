@@ -5,28 +5,22 @@
 #include "movable.h"
 
 
-Pastille::Pastille()
+Pastille::Pastille(int x, int y, Background* background)
+    : pos_x(x), pos_y(y), ObserverCollision(), DrawableElem(x, y, background)
 {
-    set_background_image(pastille.png);
+    set_background_image("pastille.png");
 
 }
-bool test_collision(int x,int y)
+bool Pastille::test_collision(int x,int y)
 {
-    int pos_x= get_pos_x();
-    int pos_y= get_pos_y();
-    if(pos_x==x && pos_y==y)
-    {
-        return 1;
-    }
-    return 0;
+    return pos_x == x && (pos_y == y);
 
 };
-void collision(NotifierCollision notifeur)
+
+void Pastille::collision(NotifierCollision* notifeur)
 {
 
     std::cout<< "collision" << std::endl;
     hide();
-    return 0;
-
 };
 
