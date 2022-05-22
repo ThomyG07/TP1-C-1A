@@ -17,7 +17,11 @@ SOURCES += \
     drawableelem.cpp \
     interactive.cpp \
     main.cpp \
+<<<<<<< HEAD
     notifiercollision.cpp \
+=======
+    mainwindow.cpp \
+>>>>>>> origin/UI
     movable.cpp \
     pastille.cpp \
     regularmove.cpp
@@ -32,6 +36,7 @@ HEADERS += \
     drawable.h \
     drawableelem.h \
     interactive.h \
+    mainwindow.h \
     movable.h \
     pastille.h \
     regularmove.h
@@ -41,6 +46,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+<<<<<<< HEAD
 DISTFILES += \
     ../images/background.png \
     ../images/blinky_ba_1.png \
@@ -97,3 +103,7 @@ DISTFILES += \
     ../images/pinky_ga_2.png \
     ../images/pinky_ha_1.png \
     ../images/pinky_ha_2.png
+=======
+FORMS += \
+    mainwindow.ui
+>>>>>>> origin/UI

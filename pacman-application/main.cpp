@@ -1,5 +1,9 @@
 #include <iostream>
+<<<<<<< HEAD
 #include<string>
+=======
+#include <string>
+>>>>>>> origin/UI
 #include <exception>
 #include "exceptionsizetab.h"
 
@@ -50,12 +54,16 @@ int main(int argc, char* argv[])
     catch(ExceptionCommand& ec)
     {
 
-        std::cout<<"La commande n'est pas reconnue <<" std::endl;
+        std::cout<<"La commande n'est pas reconnue <<"; std::endl;
     }
     catch(ExceptionBound& eb)
     {
 
+<<<<<<< HEAD
        std::cout<<"Le joueur est hors limite" std::endl;
+=======
+       std::cout<<"La joueur est hors limite"; std::endl;
+>>>>>>> origin/UI
     }
     try{(detecter_collision(ennemis_x,ennemis_y,4,x,y));}
     catch(ExceptionSizeTab& est)
