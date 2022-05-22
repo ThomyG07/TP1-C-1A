@@ -30,6 +30,38 @@ bool Personnage::test_collision(int x, int y)
 
 void Personnage::key_pressed(char key)
 {
+    const int xMin = 0, yMin = 0, xMax = 32, yMax = 15;
+
+    if(key == 'Z')
+    {
+        pos_y++;
+        if(pos_y > yMax){
+            pos_y = 0;
+        }
+    }
+    else if(key  == 'S')
+    {
+        pos_y--;
+        if(pos_y < yMin){
+            pos_y = yMax;
+        }
+    }
+    else if(key == 'Q')
+    {
+        pos_x--;
+        if(pos_x > xMin){
+            pos_x = xMax;
+        }
+    }
+    else if(key == 'D')
+    {
+        pos_x++;
+        if(pos_x > xMax){
+            pos_x = 0;
+        }
+    }
+    notify(pos_x, pos_y);
+    update_pos();
 
 }
 
@@ -43,7 +75,6 @@ void Personnage::arrow_pressed(std::string cmd)
         if(pos_y > yMax){
             pos_y = 0;
         }
-        notify(pos_x, pos_y);
     }
     else if(cmd == "DOWN")
     {
@@ -51,8 +82,6 @@ void Personnage::arrow_pressed(std::string cmd)
         if(pos_y < yMin){
             pos_y = yMax;
         }
-        notify(pos_x, pos_y);
-
     }
     else if(cmd == "LEFT")
     {
@@ -60,15 +89,14 @@ void Personnage::arrow_pressed(std::string cmd)
         if(pos_x > xMin){
             pos_x = xMax;
         }
-        notify(pos_x, pos_y);
-
-    }else if(cmd == "RIGHT")
+    }
+    else if(cmd == "RIGHT")
     {
         pos_x++;
         if(pos_x > xMax){
             pos_x = 0;
         }
-        notify(pos_x, pos_y);
     }
+    notify(pos_x, pos_y);
     update_pos();
 }
