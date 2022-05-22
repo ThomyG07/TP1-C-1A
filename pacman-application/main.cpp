@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include<string>
 #include <exception>
 #include "exceptionsizetab.h"
@@ -55,9 +55,9 @@ int main(int argc, char* argv[])
     catch(ExceptionBound& eb)
     {
 
-       std::cout<<"La joueur est hors limite" std::endl;
+       std::cout<<"Le joueur est hors limite" std::endl;
     }
-    try{(detecter_collision(ennemis_x,ennemis_y,4,x,y));))}
+    try{(detecter_collision(ennemis_x,ennemis_y,4,x,y));}
     catch(ExceptionSizeTab& est)
     {
         std::cout << "Nombre d'éléments incorrects" << std::endl;
