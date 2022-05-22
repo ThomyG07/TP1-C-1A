@@ -7,7 +7,7 @@
 
 Pastille::Pastille()
 {
-    set_backround_image(pastille.png);
+    set_background_image(pastille.png);
 
 }
 bool test_collision(int x,int y)
@@ -24,6 +24,9 @@ bool test_collision(int x,int y)
 void collision(NotifierCollision notifeur)
 {
 
+    std::cout<< "collision" << std::endl;
+    hide();
+    return 0;
 
 };
 
