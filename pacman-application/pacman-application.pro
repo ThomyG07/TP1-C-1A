@@ -16,6 +16,7 @@ SOURCES += \
     interactive.cpp \
     main.cpp \
     movable.cpp \
+    pastille.cpp \
     regularmove.cpp
 
 HEADERS += \
@@ -26,6 +27,7 @@ HEADERS += \
     drawableelem.h \
     interactive.h \
     movable.h \
+    pastille.h \
     regularmove.h
 
 # Default rules for deployment.
