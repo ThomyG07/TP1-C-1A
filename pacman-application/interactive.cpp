@@ -6,6 +6,8 @@ Interactive::Interactive(int x, int y, Background* parent):RegularMove(x, y, par
     setFocus();
 }
 
+// toma é dent le coma
+
 void Interactive::keyPressEvent(QKeyEvent* event)
 {
     switch (event->key())
