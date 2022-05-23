@@ -15,6 +15,8 @@ void Ennemi::update_pos()
     notify(pos_x, pos_y);
 }
 
+// IL BOUGE PAS
+
 void Ennemi::deplacer(int x, int y)
 {
     pos_x += x;
