@@ -20,7 +20,7 @@ bool Pastille::test_collision(int x,int y)
 void Pastille::collision(NotifierCollision* notifeur)
 {
 
-    std::cout<< "collision" << std::endl;
+    std::cout<< "collision pastille" << std::endl;
     hide();
 };
 

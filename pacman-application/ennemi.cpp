@@ -11,16 +11,57 @@ Ennemi::Ennemi(int x, int y, Background* background)
 
 void Ennemi::update_pos()
 {
-    positionner(pos_x, pos_y);
-    notify(pos_x, pos_y);
+    positionner(get_pos_x(), get_pos_y());
+    notify(get_pos_x(), get_pos_y());
 }
 
 // IL BOUGE PAS
 
 void Ennemi::deplacer(int x, int y)
 {
-    pos_x += x;
-    pos_y += y;
+    const int xMin = 0, yMin = 0, xMax = 32, yMax = 15;
+
+    if(y != 0){
+        if(y < 0){
+            if(pos_y + y < yMin)
+            {
+                pos_y = yMax-1;
+            }else{
+                pos_y += y;
+
+            }
+        }
+        if(y > 0){
+            if(pos_y + y > yMax-1)
+            {
+                pos_y = 0;
+            }else{
+                pos_y += y;
+            }
+        }
+    }
+
+    if(x != 0){
+        if(x < 0){
+            if(pos_x - x < yMin)
+            {
+                pos_x = xMax-1;
+            }else{
+                pos_x += x;
+            }
+
+        }
+        if(x > 0){
+            if(pos_x + x > xMax-1)
+            {
+                pos_x = 0;
+            }else{
+                pos_x += x;
+            }
+        }
+    }
+
+    notify(pos_x, pos_y);
     update_pos();
 }
 
@@ -31,5 +72,5 @@ bool Ennemi::test_collision(int x, int y)
 
 void Ennemi::collision(NotifierCollision* notifier)
 {
-    std::cout << "Collision" << std::endl;
+    std::cout << "Collision Ennemi" << std::endl;
 }

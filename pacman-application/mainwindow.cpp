@@ -11,10 +11,11 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    Background* background = new Background(parent);
-    Personnage* pacman = new Personnage(20, 10, background);
-    Pastille* pastille = new Pastille(5, 20, background);
-    Clyde* clyde = new Clyde(12, 13, background);
+    Background* background = ui->centralwidget;
+    Personnage* pacman = new Personnage(0, 0, background);
+    Pastille* pastille = new Pastille(5, 4,  background);
+    Clyde* clyde = new Clyde(6, 2,  background);
+
     pacman->addObserver(pastille);
     clyde->addObserver(pacman);
     pacman->addObserver(clyde);
