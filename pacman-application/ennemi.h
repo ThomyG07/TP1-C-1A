@@ -17,7 +17,7 @@ public:
     int get_pos_y(){return pos_y;}
 
     void deplacer(int x, int y);
-    void update_pos();
+    virtual void update_pos()=0;
     bool test_collision(int x, int y);
     void collision(NotifierCollision* collision);
 };

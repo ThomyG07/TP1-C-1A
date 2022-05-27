@@ -10,6 +10,10 @@ Clyde::Clyde(int x, int y, Background* background)
    set_background_image("clyde_ba_1.png");
 }
 
+void Clyde::update_pos(){
+    new_pos();
+}
+
 
 void Clyde::new_pos()
 {
@@ -18,12 +22,13 @@ void Clyde::new_pos()
     switch(val)
     {
         case 1: deplacer(1,0);
-        break;
+            break;
         case 2: deplacer(-1,0);
+        break;
         case 3: deplacer(0,1);
+        break;
         case 4: deplacer(0,-1);
-
-
+                break;
     }
-    update_pos();
 }
+

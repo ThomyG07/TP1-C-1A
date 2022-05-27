@@ -21,8 +21,12 @@ void Ennemi::deplacer(int x, int y)
 {
     const int xMin = 0, yMin = 0, xMax = 32, yMax = 15;
 
+    // Si la coordonnée y est modifié
     if(y != 0){
+
+        // Si la coordonnée y est négative
         if(y < 0){
+
             if(pos_y + y < yMin)
             {
                 pos_y = yMax-1;
@@ -43,7 +47,7 @@ void Ennemi::deplacer(int x, int y)
 
     if(x != 0){
         if(x < 0){
-            if(pos_x - x < yMin)
+            if(pos_x + x < xMin)
             {
                 pos_x = xMax-1;
             }else{
@@ -62,7 +66,7 @@ void Ennemi::deplacer(int x, int y)
     }
 
     notify(pos_x, pos_y);
-    update_pos();
+    positionner(pos_x, pos_y);
 }
 
 bool Ennemi::test_collision(int x, int y)
