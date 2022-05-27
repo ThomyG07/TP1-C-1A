@@ -1,4 +1,4 @@
-QT       += core gui statemachine
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -9,18 +9,24 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    animatedwidget.cpp \
+    Personnage.cpp \
     background.cpp \
+<<<<<<< HEAD
     observercollision.cpp \
     personnage.cpp \
+=======
+    clyde.cpp \
+>>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     drawable.cpp \
     drawableelem.cpp \
+    ennemi.cpp \
     interactive.cpp \
     main.cpp \
     regularmove.cpp\
     notifiercollision.cpp \
     mainwindow.cpp \
     movable.cpp \
+<<<<<<< HEAD
     pastille.cpp \
     ennemi.cpp \
     clyde.cpp \
@@ -33,13 +39,29 @@ HEADERS += \
     background.h \
     observercollision.h \
     personnage.h \
+=======
+    notifiercollision.cpp \
+    observercollision.cpp \
+    regularmove.cpp
+
+HEADERS += \
+    NotifierCollision.h \
+    Personnage.h \
+    background.h \
+    clyde.h \
+>>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     consts.h \
     drawable.h \
     drawableelem.h \
+    ennemi.h \
     interactive.h \
     mainwindow.h \
     movable.h \
+<<<<<<< HEAD
     pastille.h \
+=======
+    observercollision.h \
+>>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     regularmove.h
 
 # Default rules for deployment.

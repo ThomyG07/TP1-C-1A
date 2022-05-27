@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 #include <QApplication>
 #include <QLocale>
 #include <QTranslator>
 #include "mainwindow.h"
+=======
+#include<iostream>
+#include<string>
+#include <exception>
+#include "exceptionsizetab.h"
+#include "Clyde.h"
+#include "Personnage.h"
+>>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
 
 int main(int argc, char* argv[])
 {
+    Personnage pacman;
+    Clyde totot;
 
+<<<<<<< HEAD
     QApplication a(argc, argv);
 
        QTranslator translator;
@@ -20,4 +32,111 @@ int main(int argc, char* argv[])
        MainWindow w;
        w.show();
        return a.exec();
+=======
+    int x=3, y=4;
+
+    int ennemis_x[4]={1,2,3,4}, ennemis_y[4]={1,2,3,4};
+    if (detecter_collision(ennemis_x,ennemis_y,4,x,y))
+    {
+     std::cout << "Collision" << std::endl;
+    };
+    std::string cmd;
+    try{
+    do
+    {
+        std::getline(std::cin,cmd);
+       std::cout<<deplacer_personnage(x, y, cmd); // affiche 1 qd personnage peut se deplacer
+    }while(cmd != "");
+    }
+    catch(ExceptionCommand& ec)
+    {
+
+        std::cout<<"La commande n'est pas reconnue "<< std::endl;
+    }
+    catch(ExceptionBound& eb)
+    {
+
+       std::cout<<"La joueur est hors limite"<< std::endl;
+    }
+    try{
+        detecter_collision(ennemis_x,ennemis_y,4,x,y);
+    }
+    catch(ExceptionSizeTab& est)
+    {
+        std::cout << "Nombre d'éléments incorrects" << std::endl;
+    }
+    return 0;
+
+}
+
+bool deplacer_personnage(int& x, int& y, std::string cmd)
+{
+    const int xmin = 0, ymin = 0, xmax = 32, ymax = 15;
+    if(x<xmin || x >xmax || y<ymin || y > ymax)
+    {
+      throw ExceptionBound();
+    }
+    if(cmd=="UP")
+    {
+        if(y>ymin)
+        {
+            y--;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd=="DOWN")
+    {
+        if(y<ymax)
+        {
+            y++;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd == "LEFT")
+    {
+        if(x>xmin)
+        {
+            x--;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd =="RIGHT")
+    {
+        if(x<xmax)
+        {
+            x++;
+            return true;
+        }
+        else
+        {
+            return false;
+
+        }
+    }
+    else if(cmd =="IDLE")
+    {
+        return false;
+    }
+    else
+    {
+       throw ExceptionCommand();
+
+    }
+
+>>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
 }
