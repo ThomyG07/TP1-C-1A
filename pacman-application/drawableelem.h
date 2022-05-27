@@ -15,7 +15,6 @@ public:
 public slots:
     void resized(double, double);
 
-
 protected:
     void correct_margins(QRect& geom);
     int pos_x, pos_y;

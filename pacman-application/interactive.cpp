@@ -1,10 +1,13 @@
 #include "interactive.h"
+#include <iostream>
 
 
 Interactive::Interactive(int x, int y, Background* parent):RegularMove(x, y, parent)
 {
     setFocus();
 }
+
+// toma é dent le coma
 
 void Interactive::keyPressEvent(QKeyEvent* event)
 {
@@ -29,6 +32,7 @@ void Interactive::keyPressEvent(QKeyEvent* event)
             QChar ch = text[0];
             if (ch.isLetterOrNumber())
             {
+                std::cout << ch.toLatin1() << std::endl;
                 key_pressed(ch.toLatin1());
             }
         }
