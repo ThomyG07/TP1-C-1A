@@ -6,9 +6,9 @@
 #include "NotifierCollision.h"
 
 Personnage::Personnage(int pos_x, int pos_y, Background* background)
-    : NotifierCollision(), ObserverCollision(), Interactive(pos_x, pos_y, background)
+    : NotifierCollision(), ObserverCollision(), Interactive(pos_x, pos_y, background), score(0), lifes(3)
 {
-    set_background_image("pacman_dr_1.png");
+    set_background_image("pacman_dr_4.png");
 }
 
 void Personnage::update_pos()
@@ -46,7 +46,7 @@ void Personnage::key_pressed(char key)
         if(pos_y < yMin){
             pos_y = yMax-1;
         }
-        set_background_image("pacman_ha_4");
+       set_background_image("pacman_go_4");
     }
     else if(key == 'q' || key == 'Q')
     {
@@ -54,7 +54,7 @@ void Personnage::key_pressed(char key)
         if(pos_x < xMin){
             pos_x = xMax-1;
         }
-        set_background_image("pacman_ga_4");
+        set_background_image("pacman_ha_4");
     }
     else if(key == 'd' || key == 'D')
     {

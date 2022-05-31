@@ -5,9 +5,9 @@
 #include <tuple>
 
 Blinky::Blinky(int x, int y, Background* background, Personnage* _personnage)
- :Ennemi(x, y, background), personnage(_personnage)
+ :Ennemi(x, y, background, _personnage)
 {
-    set_background_image("blinky_ba_1.png");
+    set_background_image("blinky_ba_2.png");
 }
 
 void Blinky::new_pos()
@@ -27,7 +27,7 @@ void Blinky::update_pos()
     int vector_x_min = 0;
     int vector_y_min = 0;
 
-    std::vector<std::tuple<int, int>> vectors = {std::make_tuple(1, 0), std::make_tuple(-1, 0), std::make_tuple(0, 1), std::make_tuple(0, -1)};
+    std::vector<std::tuple<int, int>> vectors = {std::make_tuple(1, 0), std::make_tuple(-1, 0), std::make_tuple(0, 1), std::make_tuple(0, -1), std::make_tuple(0, 0)};
 
     float distance = 255.0;
 
@@ -35,6 +35,8 @@ void Blinky::update_pos()
 
     for(int i = 0; i < vectors.size(); i++)
     {
+
+
         std::tuple<int, int> vector = vectors[i];
 
         int vector_x = std::get<0>(vector);
@@ -75,7 +77,7 @@ void Blinky::update_pos()
         int temp_distance = std::hypot(pos_personnage_x - temp_x,pos_personnage_y - temp_y);
 
 
-        if(distance >= temp_distance)
+        if(distance > temp_distance)
         {
             distance = temp_distance;
             vector_x_min = vector_x;

@@ -12,7 +12,6 @@ SOURCES += \
     Personnage.cpp \
     background.cpp \
     observercollision.cpp \
-    personnage.cpp \
     clyde.cpp \
     drawable.cpp \
     drawableelem.cpp \
@@ -25,7 +24,6 @@ SOURCES += \
     mainwindow.cpp \
     movable.cpp \
     pastille.cpp \
-    clyde.cpp \
 
 HEADERS += \
     NotifierCollision.h \

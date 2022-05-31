@@ -9,6 +9,8 @@ class Personnage: public NotifierCollision, public ObserverCollision, public Int
 {
 private:
     std::string deplacement;
+    int score;
+    int lifes;
 public:
     Personnage(int x, int y, Background* background);
     void setDeplacement(std::string deplacement);
@@ -17,6 +19,10 @@ public:
     void collision(NotifierCollision* notifier);
     bool test_collision(int x, int y);
     void update_pos();
+    int get_score() {return score;}
+    void increase_score(){ score+=150;}
+    int get_lifes() {return score;}
+    void decrease_life(){ lifes--;}
     void arrow_pressed(std::string cmd);
 };
 

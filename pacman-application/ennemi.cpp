@@ -4,7 +4,7 @@
 #include "NotifierCollision.h"
 #include <iostream>
 
-Ennemi::Ennemi(int x, int y, Background* background)
+Ennemi::Ennemi(int x, int y, Background* background, Personnage* personnage)
     : RegularMove(x, y, background), ObserverCollision(), NotifierCollision()
 {
 
@@ -77,5 +77,5 @@ bool Ennemi::test_collision(int x, int y)
 
 void Ennemi::collision(NotifierCollision* notifier)
 {
-    std::cout << "Collision Ennemi" << std::endl;
+
 }

@@ -4,10 +4,10 @@
 
 #include <iostream>
 
-Clyde::Clyde(int x, int y, Background* background)
-    : Ennemi(x, y, background)
+Clyde::Clyde(int x, int y, Background* background, Personnage* personnage)
+    : Ennemi(x, y, background, personnage)
 {
-   set_background_image("clyde_ba_1.png");
+   set_background_image("clyde_ha_2.png");
 }
 
 void Clyde::update_pos(){
@@ -18,7 +18,6 @@ void Clyde::update_pos(){
 void Clyde::new_pos()
 {
     int val = rand() % 4;
-    std::cout << val << std::endl;
     switch(val)
     {
         case 1: deplacer(1,0);
