@@ -1,10 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "personnage.h"
+#include "Personnage.h"
 #include "clyde.h"
 #include "pastille.h"
 #include "background.h"
+#include "blinky.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,12 +14,19 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     Background* background = ui->centralwidget;
     Personnage* pacman = new Personnage(0, 0, background);
+    Blinky* blinky = new Blinky(4, 9, background, pacman);
     Pastille* pastille = new Pastille(5, 4,  background);
     Clyde* clyde = new Clyde(6, 2,  background);
 
+    blinky->addObserver(pacman);
+    blinky->addObserver(clyde);
+
     pacman->addObserver(pastille);
-    clyde->addObserver(pacman);
+    pacman->addObserver(blinky);
     pacman->addObserver(clyde);
+
+    clyde->addObserver(pacman);
+    clyde->addObserver(blinky);
 
 }
 

@@ -31,7 +31,7 @@ void Blinky::update_pos()
 
     float distance = 255.0;
 
-    const xMax = 32, yMax = 15;
+    const int xMax = 32, yMax = 15;
 
     for(int i = 0; i < vectors.size(); i++)
     {
