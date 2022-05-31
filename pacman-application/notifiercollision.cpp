@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-#include "notifiercollision.h"
-#include "observercollision.h"
-=======
 #include "NotifierCollision.h"
->>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
+#include "observercollision.h"
 #include <vector>
-#include"observercollision.h"
 
 NotifierCollision::NotifierCollision()
     :observerList(std::vector<ObserverCollision*>())

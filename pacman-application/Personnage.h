@@ -1,17 +1,11 @@
 #ifndef PERSONNAGE_H
 #define PERSONNAGE_H
 #include <string>
-<<<<<<< HEAD
 #include "interactive.h"
-#include "notifiercollision.h"
+#include "Notifiercollision.h"
 #include "observercollision.h"
 
 class Personnage: public NotifierCollision, public ObserverCollision, public Interactive
-=======
-#include "NotifierCollision.h"
-
-class Personnage: public NotifierCollision
->>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
 {
 private:
     std::string deplacement;

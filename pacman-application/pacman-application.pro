@@ -11,14 +11,12 @@ CONFIG += c++11
 SOURCES += \
     Personnage.cpp \
     background.cpp \
-<<<<<<< HEAD
     observercollision.cpp \
     personnage.cpp \
-=======
     clyde.cpp \
->>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     drawable.cpp \
     drawableelem.cpp \
+    blinky.cpp \
     ennemi.cpp \
     interactive.cpp \
     main.cpp \
@@ -26,30 +24,15 @@ SOURCES += \
     notifiercollision.cpp \
     mainwindow.cpp \
     movable.cpp \
-<<<<<<< HEAD
     pastille.cpp \
-    ennemi.cpp \
     clyde.cpp \
-
-HEADERS += \
-    ennemi.h \
-    clyde.h \
-    animatedwidget.h \
-    notifiercollision.h \
-    background.h \
-    observercollision.h \
-    personnage.h \
-=======
-    notifiercollision.cpp \
-    observercollision.cpp \
-    regularmove.cpp
 
 HEADERS += \
     NotifierCollision.h \
     Personnage.h \
+    blinky.h \
     background.h \
     clyde.h \
->>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     consts.h \
     drawable.h \
     drawableelem.h \
@@ -57,11 +40,8 @@ HEADERS += \
     interactive.h \
     mainwindow.h \
     movable.h \
-<<<<<<< HEAD
     pastille.h \
-=======
     observercollision.h \
->>>>>>> dadb76f6e62de17075dd869e78462445fb511b54
     regularmove.h
 
 # Default rules for deployment.
