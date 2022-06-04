@@ -14,7 +14,7 @@ public:
     Wall(int x, int y, Background* background);
     bool test_collision(int x, int y);
     void collision(NotifierCollision* collision);
-    std::string Gettype();
+    std::string getType(){return "Wall";};
 };
 
 #endif // WALL_H

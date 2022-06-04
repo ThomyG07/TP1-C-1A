@@ -12,11 +12,7 @@ Pastille::Pastille(int x, int y, Background* background, Personnage* personnage)
     set_background_image("pastille.png");
 
 }
-std::string Pastille::Gettype()
-{
 
-    return "pastille";
-}
 bool Pastille::test_collision(int x,int y)
 {
     return pos_x == x && (pos_y == y);

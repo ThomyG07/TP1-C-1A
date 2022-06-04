@@ -4,11 +4,7 @@ Wall::Wall(int x, int y, Background* background): pos_x(x), pos_y(y), DrawableEl
 {
   set_background_image("wall (2).png");
 }
-std::string Wall::Gettype()
-{
 
-    return "Wall";
-}
 bool Wall::test_collision(int x, int y)
 {
     return (pos_x == x && pos_y == y );

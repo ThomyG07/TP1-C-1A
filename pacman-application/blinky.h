@@ -12,6 +12,7 @@ public:
     Blinky(int x, int y, Background* background, Personnage* personnage);
     void update_pos();
     void new_pos();
+    void setPosition(int x, int y){set_pos_x(x);set_pos_y(y);update_pos();}
 };
 
 #endif // BLINKY_H

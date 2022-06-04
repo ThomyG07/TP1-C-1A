@@ -43,7 +43,7 @@ bool NotifierCollision::notifyWall(int x, int y)
 {
     for(int i = 0; i < observerList.size(); i++)
     {
-        if(observerList[i]->test_collision(x, y) && observerList[i]->Gettype()=="Wall")
+        if(observerList[i]->test_collision(x, y) && observerList[i]->getType()=="Wall")
         {
             return true;
         }

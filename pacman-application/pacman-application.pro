@@ -11,6 +11,7 @@ CONFIG += c++11
 SOURCES += \
     Personnage.cpp \
     background.cpp \
+    map.cpp \
     observercollision.cpp \
     clyde.cpp \
     drawable.cpp \
@@ -24,10 +25,7 @@ SOURCES += \
     mainwindow.cpp \
     movable.cpp \
     pastille.cpp \
-<<<<<<< Updated upstream
-=======
     wall.cpp
->>>>>>> Stashed changes
 
 HEADERS += \
     NotifierCollision.h \
@@ -41,6 +39,7 @@ HEADERS += \
     ennemi.h \
     interactive.h \
     mainwindow.h \
+    map.h \
     movable.h \
     pastille.h \
     observercollision.h \

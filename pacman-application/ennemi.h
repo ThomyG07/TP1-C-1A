@@ -20,11 +20,14 @@ public:
 
     Personnage* getPersonnage(){return perso;}
 
+    void set_pos_x(int x){pos_x = x;}
+    void set_pos_y(int y){pos_y = y;}
+
     void deplacer(int x, int y);
     virtual void update_pos()=0;
     bool test_collision(int x, int y);
     void collision(NotifierCollision* collision);
-    std::string Gettype();
+    std::string getType(){return "Ennemi";};
 };
 
 #endif // ENNEMI_H

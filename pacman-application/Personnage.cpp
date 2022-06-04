@@ -1,19 +1,14 @@
-#include "personnage.h"
+#include "Personnage.h"
 #include <string>
 #include <string.h>
 #include <iostream>
 #include "observercollision.h"
 #include "NotifierCollision.h"
 
-Personnage::Personnage(int pos_x, int pos_y, Background* background)
-    : NotifierCollision(), ObserverCollision(), Interactive(pos_x, pos_y, background), score(0), lifes(3)
+Personnage::Personnage(int _pos_x, int _pos_y, Background* background)
+    : NotifierCollision(), ObserverCollision(), Interactive(_pos_x, _pos_y, background), score(0), lifes(3)
 {
     set_background_image("pacman_dr_4.png");
-}
-std::string Personnage::Gettype()
-{
-
-    return"Personnage";
 }
 
 void Personnage::update_pos()
@@ -24,7 +19,6 @@ void Personnage::update_pos()
 
 void Personnage::collision(NotifierCollision* notifieur)
 {
-    std::cout << "Collision Personnage" << std::endl;
 }
 
 // x et y sont les positions de l'ennemi/pastille

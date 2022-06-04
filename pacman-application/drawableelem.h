@@ -3,6 +3,7 @@
 
 #include "drawable.h"
 #include "background.h"
+#include <string>
 
 class DrawableElem : public Drawable
 {

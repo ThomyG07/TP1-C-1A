@@ -5,7 +5,7 @@
 #include <tuple>
 
 Blinky::Blinky(int x, int y, Background* background, Personnage* _personnage)
- :Ennemi(x, y, background, _personnage)
+ :Ennemi(x, y, background, _personnage), personnage(_personnage)
 {
     set_background_image("blinky_ba_2.png");
 }

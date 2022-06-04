@@ -9,7 +9,7 @@ public:
     ObserverCollision();
    virtual void collision(NotifierCollision* notifieur)=0;
    virtual bool test_collision(int x, int y)=0;
-   virtual std::string Gettype()=0;
+   virtual std::string getType()=0;
 };
 
 #endif // OBSERVERCOLLISION_H

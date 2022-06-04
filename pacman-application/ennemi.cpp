@@ -5,14 +5,9 @@
 #include <iostream>
 
 Ennemi::Ennemi(int x, int y, Background* background, Personnage* personnage)
-    : RegularMove(x, y, background), ObserverCollision(), NotifierCollision()
+    : RegularMove(x, y, background), ObserverCollision(), NotifierCollision(), perso(personnage)
 {
 
-}
-std::string Ennemi::Gettype()
-{
-
-    return "Ennemi";
 }
 
 void Ennemi::update_pos()
@@ -82,5 +77,6 @@ bool Ennemi::test_collision(int x, int y)
 
 void Ennemi::collision(NotifierCollision* notifier)
 {
-
+    perso->decrease_life();
+    std::cout << "Nombre de vie : " << perso->get_lifes() << std::endl;
 }
