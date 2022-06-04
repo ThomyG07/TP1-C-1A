@@ -10,6 +10,11 @@ Personnage::Personnage(int pos_x, int pos_y, Background* background)
 {
     set_background_image("pacman_dr_4.png");
 }
+std::string Personnage::Gettype()
+{
+
+    return"Personnage";
+}
 
 void Personnage::update_pos()
 {
@@ -73,7 +78,7 @@ void Personnage::arrow_pressed(std::string cmd)
 {
     const int xMin = 0, yMin = 0, xMax = 32, yMax = 15;
 
-    if(cmd=="DOWN")
+    if(cmd=="DOWN" && notifyWall(pos_x,pos_y+1)== false)
     {
         pos_y++;
         if(pos_y > yMax-1){
@@ -81,7 +86,7 @@ void Personnage::arrow_pressed(std::string cmd)
         }
         set_background_image("pacman_ba_4");
     }
-    else if(cmd == "UP")
+    else if(cmd == "UP"&& notifyWall(pos_x,pos_y-1)== false)
     {
         pos_y--;
         if(pos_y < yMin){
@@ -89,7 +94,7 @@ void Personnage::arrow_pressed(std::string cmd)
         }
         set_background_image("pacman_ha_4");
     }
-    else if(cmd == "LEFT")
+    else if(cmd == "LEFT" && notifyWall(pos_x-1,pos_y)== false)
     {
         pos_x--;
         if(pos_x < xMin){
@@ -97,7 +102,7 @@ void Personnage::arrow_pressed(std::string cmd)
         }
         set_background_image("pacman_ga_4");
     }
-    else if(cmd == "RIGHT")
+    else if(cmd == "RIGHT" && notifyWall(pos_x+1,pos_y)== false)
     {
         pos_x++;
         if(pos_x > xMax-1){

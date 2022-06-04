@@ -14,5 +14,6 @@ public:
     void addObserver(ObserverCollision* obs);
     void removeObserver(ObserverCollision* obs);
     void notify(int x, int y);
+    bool notifyWall(int x, int y);
 };
 #endif // NOTIFIERCOLLISION_H

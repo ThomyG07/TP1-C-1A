@@ -9,6 +9,11 @@ Ennemi::Ennemi(int x, int y, Background* background, Personnage* personnage)
 {
 
 }
+std::string Ennemi::Gettype()
+{
+
+    return "Ennemi";
+}
 
 void Ennemi::update_pos()
 {
@@ -26,7 +31,7 @@ void Ennemi::deplacer(int x, int y)
     if(y != 0){
 
         // Si la coordonnée y est négative
-        if(y < 0){
+        if(y < 0 && notifyWall(pos_x,pos_y-1)== false){
 
             if(pos_y + y < yMin)
             {
@@ -36,7 +41,7 @@ void Ennemi::deplacer(int x, int y)
 
             }
         }
-        if(y > 0){
+        if(y > 0 && notifyWall(pos_x,pos_y+1)== false){
             if(pos_y + y > yMax-1)
             {
                 pos_y = 0;
@@ -47,7 +52,7 @@ void Ennemi::deplacer(int x, int y)
     }
 
     if(x != 0){
-        if(x < 0){
+        if(x < 0 && notifyWall(pos_x-1,pos_y)== false){
             if(pos_x + x < xMin)
             {
                 pos_x = xMax-1;
@@ -56,7 +61,7 @@ void Ennemi::deplacer(int x, int y)
             }
 
         }
-        if(x > 0){
+        if(x > 0 && notifyWall(pos_x+1,pos_y)== false){
             if(pos_x + x > xMax-1)
             {
                 pos_x = 0;

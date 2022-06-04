@@ -16,6 +16,7 @@ public:
     Pastille(int x, int y, Background* background, Personnage* personnage);
     bool test_collision(int x,int y);
     void collision(NotifierCollision* notifeur);
+    std::string Gettype();
 };
 
 #endif // PASTILLE_H

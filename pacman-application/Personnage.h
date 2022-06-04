@@ -24,6 +24,7 @@ public:
     int get_lifes() {return score;}
     void decrease_life(){ lifes--;}
     void arrow_pressed(std::string cmd);
+    std::string Gettype();
 };
 
 #endif // PERSONNAGE_H

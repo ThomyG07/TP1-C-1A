@@ -46,7 +46,7 @@ void Blinky::update_pos()
         int temp_y = pos_blinky_y + vector_y;
 
 
-        if(vector_x > 0){
+        if(vector_x > 0 ){
             if(abs(pos_personnage_x - (xMax-1 + temp_x)) < abs(pos_personnage_x - temp_x) )
             {
                 temp_x = (xMax-1 + temp_x);

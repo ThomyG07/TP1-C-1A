@@ -24,6 +24,7 @@ public:
     virtual void update_pos()=0;
     bool test_collision(int x, int y);
     void collision(NotifierCollision* collision);
+    std::string Gettype();
 };
 
 #endif // ENNEMI_H

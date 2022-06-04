@@ -24,6 +24,10 @@ SOURCES += \
     mainwindow.cpp \
     movable.cpp \
     pastille.cpp \
+<<<<<<< Updated upstream
+=======
+    wall.cpp
+>>>>>>> Stashed changes
 
 HEADERS += \
     NotifierCollision.h \
@@ -40,7 +44,8 @@ HEADERS += \
     movable.h \
     pastille.h \
     observercollision.h \
-    regularmove.h
+    regularmove.h \
+    wall.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
